@@ -14,7 +14,7 @@ import joymeter.aliduanxin.service.MessageSendService;
 public class MessageSendServiceImp implements MessageSendService{
 	
 	public  SendSmsResponse sendSms(String number,String code) {
-        String modelCode  = "SMS_80190341";
+  
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
         System.setProperty("sun.net.client.defaultReadTimeout", "10000");
 
