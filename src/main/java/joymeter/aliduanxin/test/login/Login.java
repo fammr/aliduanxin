@@ -55,16 +55,16 @@ public String login(HttpServletRequest req,HttpServletRequest resp,Map<String,Ob
 @RequestMapping("/codeCreate.action")
 public void imageCodeCreate(HttpServletRequest req,HttpServletResponse resp) throws IOException {
 	
-	String key = "123456789";
+	String key = "xxx";
 	String code = (String) ImageCodeCreate.createImageCode().get("code");
     String url = "http://localhost:8080/aliduanxin/joymeter/messageSend";
     JSONObject json = new JSONObject();
-    json.put("number", "18720057281");
+    json.put("number", "xxxx");
     json.put("code", code);
     json.put("nonceStr", MerchantApiUtil.getNonceStr());
     json.put("timeStamp", MerchantApiUtil.getTimeStamp());
     Map<String,Object> map = new HashMap<String,Object>();
-    map.put("number", "18720057281");
+    map.put("number", "xxxx");
     map.put("code", code);
     //随机字符串
     map.put("nonceStr", json.getString("nonceStr"));

@@ -24,7 +24,7 @@ import net.sf.json.JSONObject;
  */
 
 public class Test1 {
-	   private  static String key="123456789"; //模拟key值
+	   private  static String key="xxx"; //模拟key值
 
 			public static void main(String[] args) {
 		
@@ -32,7 +32,7 @@ public class Test1 {
 		            String url = "http://localhost:8080/aliduanxin/joymeter/messageSend";
 //		            String url="http://localhost:8080/aliduanxin/joymeter/messageSend";
 		            JSONObject json = new JSONObject();
-		            json.put("number", "18720057281");
+		            json.put("number", "xxxxxx");
 		            json.put("code", "0000");
 		            json.put("nonceStr", MerchantApiUtil.getNonceStr());
 		            json.put("timeStamp", MerchantApiUtil.getTimeStamp());
