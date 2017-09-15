@@ -13,8 +13,10 @@ var InterValObj; //timer变量，控制时间
 var count = 100; //间隔函数，1秒执行  
 var curCount;//当前剩余秒数  
 function reloadCode(){  
+	var number = $("#number").val();
+	alert(number);
       //向后台发送请求生成code并存入session中
-      $.post("codeCreate.action", { time : new Date().getTime() } );
+      $.post("codeCreate.action", { time : new Date().getTime(), number : number } );
       curCount = count;  
       //读秒提示
       $("#btn").attr("disabled", "true");  
@@ -40,7 +42,9 @@ function SetRemainTime() {
 </script>
 <body>
 <form method='post' action='login.action'>  
+    <input type="text" name="number" id="number" value=""/>请输入号码<br>
     <input type="text" name="code" id="code" value=""/>
+   
     <input type="button" id="btn" value="点击获取验证码" onclick="reloadCode()"/><br>
     <input type="submit" value="Login">  
     
