@@ -53,8 +53,8 @@ public String login(HttpServletRequest req,HttpServletRequest resp,Map<String,Ob
  * @throws IOException
  */
 @RequestMapping("/codeCreate.action")
-public void imageCodeCreate(HttpServletRequest req,HttpServletResponse resp) throws IOException {
-	
+public void imageCodeCreate(HttpServletRequest req,HttpServletResponse resp,Map<String,Object> map2) throws IOException {
+
 	String key = "123456789";
 	String code = (String) ImageCodeCreate.createImageCode().get("code");
 	String number=req.getParameter("number");
